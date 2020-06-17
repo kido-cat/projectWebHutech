@@ -1,0 +1,63 @@
+﻿using MvcClothesStore.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace MvcClothesStore.Controllers
+{
+    public class ClothesStoreController : Controller
+    {
+        // GET: ClothesStore
+        dbQLClothesDataContext db = new dbQLClothesDataContext();
+        private List<SanPham> Getproducts()
+        {
+            return db.SanPham.ToList();
+        }
+
+        private List<SanPham> Getnewproducts(int count)
+        {
+            return db.SanPham.OrderByDescending(a => a.NgayDang).Take(count).ToList();
+        }
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult Home()
+        {
+            var item = Getproducts();
+            return View(item);
+        }
+        public ActionResult NewProducts()
+        {
+            var item = Getnewproducts(7);
+            return View(item);
+        }
+        public ActionResult hdsw()
+        {
+            var item = from i in db.SanPham where i.id_con==2 select i;
+            return View(item);
+        }
+        public ActionResult backpack()
+        {
+            var item = from i in db.SanPham where i.id_con == 3 select i;
+            return View(item);
+        }
+        public ActionResult Shortpant()
+        {
+            var item = from i in db.SanPham where i.id_con == 4 select i;
+            return View(item);
+        }
+        public ActionResult Jacket()
+        {
+            var item = from i in db.SanPham where i.id_con == 5 select i;
+            return View(item);
+        }
+        public ActionResult Details(string id)
+        {
+            var item = from i in db.SanPham where i.MaSP == id select i;
+            return View(item.Single());
+        }
+    }
+}

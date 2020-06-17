@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbQLClothes">
+  <DataContextMoniker Name="/dbQLClothesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9afced52-9a7f-4ba7-90ed-94e52e405207" absoluteBounds="0.75, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbQLClothesDataContext/DonHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f585cd2-047d-4bc8-b218-d7fd5effe21a" absoluteBounds="0.765, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a769ab50-35bd-4436-88b4-06fda03a96c8" absoluteBounds="6.25, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/dbQLClothesDataContext/GioHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4f990e6-0bc6-4c44-bdff-ce8402689702" absoluteBounds="6.265, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ad5f8abc-28e4-4291-8789-2a32cefafde3" absoluteBounds="0.75, 1.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/dbQLClothesDataContext/MenuCon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e8b1ca6-d707-4a8a-a10a-43d6406778b2" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83d5a7f7-8098-4da0-a867-e3754982c8f2" absoluteBounds="3.75, 4.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/dbQLClothesDataContext/NguoiDung" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d6554a1a-a982-46bc-99e6-5bc1b874e729" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9647e38c-0d77-441d-96e9-a93d875fb2c9" absoluteBounds="3.5, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbQLClothesDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e33f447e-373f-4d5d-909f-4f57dc246050" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.06814697265625); (6.25 : 2.06814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbQLClothesDataContext/SanPham/SanPham_GioHang" />
+      <nodes>
+        <classShapeMoniker Id="9647e38c-0d77-441d-96e9-a93d875fb2c9" />
+        <classShapeMoniker Id="a769ab50-35bd-4436-88b4-06fda03a96c8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/dbQLClothesDataContext/MenuCon/MenuCon_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="ad5f8abc-28e4-4291-8789-2a32cefafde3" />
+        <classShapeMoniker Id="9647e38c-0d77-441d-96e9-a93d875fb2c9" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
